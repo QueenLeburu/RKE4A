@@ -10,27 +10,53 @@
 <body>
     <div class="topnav-centered">
         <a href="index.html">Dashboard</a>
-        <a href="sensor1.html">Sensor1</a>
-        <a class="active" href="expansion.html">Expansion</a>
+        <a  href="sensor1.html">Sensor1</a>
+        <a  href="sensor2.html">Sensor2</a>
+        <a  href="sensor3.html">Sensor3</a>
+        <a  href="sensor4.html">Sensor4</a>
+        <a class = "active" href="expansion.html">Expansion</a>
         <a href = "reactions.html">Reactions</a>
       </div>
 
       <h1> Add A New Sensor</h1>
 
+
       <div id = "test">
-        <button onclick="buttonPressed()"> Add Sensor Plot</button>
+        <form>
+            <label for="fname">Channel ID: </label><br>
+            <input type="text" id="fname" name="fname" value="1708546"><br>
+            <label for="lname">Chart Number: </label><br>
+            <input type="number" id="lname" name="lname" min="1">
+            <label for="cars">Choose a type:</label>
+
+            <select name="option" id="option">
+            <option value="charts">Charts</option>
+            <option value="widgets">Widgets</option>
+            </select>
+          </form>
+          <button onclick="buttonPressed()"> Add Sensor Plot</button>
+          <button onClick="window.location.reload();">Remove additions</button>
       </div>
       <script>
           i = 1;
 
         const buttonPressed = () => {
+            
+            var readApi = document.getElementById('fname').value;
+            var sensortype = document.getElementById('lname').value;
+            var chartype = document.getElementById('option').value;
+            
 
             var iframe = document.createElement('iframe');
-            var html = '<body>Foo</body>';
-            iframe.src = "https://thingspeak.com/channels/1708546/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15";
+            var span = document.createElement("span");
+            span.innerHTML = "&nbsp;"; // (if this doesn't work try " ")
+            iframe.src = "https://thingspeak.com/channels/"+readApi+"/"+chartype+"/"+sensortype+"?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15";
             iframe.width = "450";
             iframe.height = "260";
+            document.body.append(span);
             document.body.appendChild(iframe);
+            console.log(readApi);
+
             console.log('iframe.contentWindow =', iframe.contentWindow);
 
         
