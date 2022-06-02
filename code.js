@@ -40,19 +40,19 @@ $(document).ready(function() {
          var inspectSecond = parseFloat(data.field2);
          if (localStorage.getItem("ExecuteCheck") == "true")
          {
-         if(inspect >= 40){
-             execute("Sensor 1 temperature is greater than 40");
+         if(inspect >= 35){
+             execute("Sensor 1 Temperature is above threshold of 35 degrees");
          }
-         else if (inspect < 0)
+         else if (inspect < -20)
          {
-             execute("Sensor 1 temperature is less than 0");
+             execute("Sensor 1 temperature is bellow threshold of -20 degrees");
          }
-         if(inspectSecond >= 40){
-             execute("Sensor 1 humidity is greater than 40");
+         if(inspectSecond >= 35){
+             execute("Sensor 1 humidity is above threshold of 35");
          }
          else if (inspectSecond < 0)
          {
-             execute("Sensor 1 humidity is less than 0");
+             execute("Sensor 1 humidity is less than threshold of -20 degrees");
          }
          
          
@@ -75,24 +75,22 @@ $(document).ready(function() {
          var inspectSecond = parseFloat(data.field2);
          if (localStorage.getItem("ExecuteCheck") == "true")
          {
-         if(inspect >= 40){
-             execute("Sensor 2 temperature is greater than 40");
-         }
-         else if (inspect < 0)
-         {
-             execute("Sensor 2 temperature is less than 0");
-         }
-         if(inspectSecond >= 40){
-             execute("Sensor 2 humidity is greater than 40");
-         }
-         else if (inspectSecond < 0)
-         {
-             execute("Sensor 2 humidity is less than 0");
-         }
-         
-         
-         }
+            if(inspect >= 35){
+                execute("Sensor 2 Temperature is above threshold of 35 degrees");
+            }
+            else if (inspect < -20)
+            {
+                execute("Sensor 2 temperature is bellow threshold of -20 degrees");
+            }
+            if(inspectSecond >= 35){
+                execute("Sensor 2 humidity is above threshold of 35");
+            }
+            else if (inspectSecond < 0)
+            {
+                execute("Sensor 2 humidity is less than threshold of -20 degrees");
+            }
         }
+    }
      });
  }
  function GetDataSensor3()
@@ -110,20 +108,20 @@ $(document).ready(function() {
          var inspectSecond = parseFloat(data.field2);
          if (localStorage.getItem("ExecuteCheck") == "true")
          {
-         if(inspect >= 40){
-             execute("Sensor 3 temperature is greater than 40");
-         }
-         else if (inspect < 0)
-         {
-             execute("Sensor 3 temperature is less than 0");
-         }
-         if(inspectSecond >= 40){
-             execute("Sensor 3 humidity is greater than 40");
-         }
-         else if (inspectSecond < 0)
-         {
-             execute("Sensor 3 humidity is less than 0");
-         }
+            if(inspect >= 35){
+                execute("Sensor 3 Temperature is above threshold of 35 degrees");
+            }
+            else if (inspect < -20)
+            {
+                execute("Sensor 3 temperature is bellow threshold of -20 degrees");
+            }
+            if(inspectSecond >= 35){
+                execute("Sensor 3 humidity is above threshold of 35");
+            }
+            else if (inspectSecond < 0)
+            {
+                execute("Sensor 3 humidity is less than threshold of -20 degrees");
+            }
          
          
          }
@@ -144,26 +142,22 @@ $(document).ready(function() {
          success: function (data, textStatus, xhr) {
             if (localStorage.getItem("ExecuteCheck") == "true")
             {
-         var inspect = parseFloat(data.field1);
-         var inspectSecond = parseFloat(data.field2);
-         if(inspect >= 40){
-             execute("Sensor 4 temperature is greater than 40");
-         }
-         else if (inspect < 0)
-         {
-             execute("Sensor 4 temperature is less than 0");
-         }
-         if(inspectSecond >= 40){
-             execute("Sensor 4 humidity is greater than 40");
-         }
-         else if (inspectSecond < 0)
-         {
-             execute("Sensor 4 humidity is less than 0");
-         }
-         
-         
-         }
+                if(inspect >= 35){
+                    execute("Sensor 4 Temperature is above threshold of 35 degrees");
+                }
+                else if (inspect < -20)
+                {
+                    execute("Sensor 4 temperature is bellow threshold of -20 degrees");
+                }
+                if(inspectSecond >= 35){
+                    execute("Sensor 4 humidity is above threshold of 35");
+                }
+                else if (inspectSecond < 0)
+                {
+                    execute("Sensor 4 humidity is less than threshold of -20 degrees");
+                }
         }
+    }
      });
  }
 
@@ -181,5 +175,5 @@ function enable(){
 
 function disable(){
     localStorage.setItem("ExecuteCheck","false");
-    execute("No notifications will be sent to users cellphone number")
+    execute("No notifications will be sent to users cellphone")
 }
