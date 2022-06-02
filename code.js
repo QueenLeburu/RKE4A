@@ -43,16 +43,16 @@ $(document).ready(function() {
          if(inspect >= 35){
              execute("Sensor 1 Temperature is above threshold of 35 degrees");
          }
-         else if (inspect < -20)
+         else if (inspect < 10)
          {
-             execute("Sensor 1 temperature is bellow threshold of -20 degrees");
+             execute("Sensor 1 temperature is bellow threshold of 10 degrees");
          }
          if(inspectSecond >= 35){
              execute("Sensor 1 humidity is above threshold of 35");
          }
-         else if (inspectSecond < 0)
+         else if (inspectSecond < 10)
          {
-             execute("Sensor 1 humidity is less than threshold of -20 degrees");
+             execute("Sensor 1 humidity is less than threshold of 10 degrees");
          }
          
          
@@ -78,16 +78,16 @@ $(document).ready(function() {
             if(inspect >= 35){
                 execute("Sensor 2 Temperature is above threshold of 35 degrees");
             }
-            else if (inspect < -20)
+            else if (inspect < 10)
             {
-                execute("Sensor 2 temperature is bellow threshold of -20 degrees");
+                execute("Sensor 2 temperature is bellow threshold of 10 degrees");
             }
             if(inspectSecond >= 35){
                 execute("Sensor 2 humidity is above threshold of 35");
             }
-            else if (inspectSecond < 0)
+            else if (inspectSecond < 10)
             {
-                execute("Sensor 2 humidity is less than threshold of -20 degrees");
+                execute("Sensor 2 humidity is less than threshold of 10 degrees");
             }
         }
     }
@@ -111,16 +111,16 @@ $(document).ready(function() {
             if(inspect >= 35){
                 execute("Sensor 3 Temperature is above threshold of 35 degrees");
             }
-            else if (inspect < -20)
+            else if (inspect < 10)
             {
-                execute("Sensor 3 temperature is bellow threshold of -20 degrees");
+                execute("Sensor 3 temperature is bellow threshold of 10 degrees");
             }
             if(inspectSecond >= 35){
                 execute("Sensor 3 humidity is above threshold of 35");
             }
-            else if (inspectSecond < 0)
+            else if (inspectSecond < 10)
             {
-                execute("Sensor 3 humidity is less than threshold of -20 degrees");
+                execute("Sensor 3 humidity is less than threshold of 10 degrees");
             }
          
          
@@ -145,16 +145,16 @@ $(document).ready(function() {
                 if(inspect >= 35){
                     execute("Sensor 4 Temperature is above threshold of 35 degrees");
                 }
-                else if (inspect < -20)
+                else if (inspect < 10)
                 {
-                    execute("Sensor 4 temperature is bellow threshold of -20 degrees");
+                    execute("Sensor 4 temperature is bellow threshold of 10 degrees");
                 }
                 if(inspectSecond >= 35){
                     execute("Sensor 4 humidity is above threshold of 35");
                 }
-                else if (inspectSecond < 0)
+                else if (inspectSecond < 10)
                 {
-                    execute("Sensor 4 humidity is less than threshold of -20 degrees");
+                    execute("Sensor 4 humidity is less than threshold of 10 degrees");
                 }
         }
     }
